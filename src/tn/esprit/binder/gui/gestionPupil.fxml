@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="537.0" prefWidth="920.0" style="-fx-background-color: #f2f2e8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.binder.gui.GestionPupilController">
+    <children>
+        <Label alignment="CENTER" layoutX="330.0" layoutY="-1.0" prefHeight="48.0" prefWidth="920.0" style="-fx-background-color:#48d1cc;" text="Pupils Management" textFill="BLACK" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <font>
+                <Font size="24.0" />
+                  
+                  
+            </font>
+        </Label>
+      
+        <GridPane layoutX="5.0" layoutY="-12.0" prefHeight="500.0" prefWidth="910.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-12.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="890.0" minWidth="10.0" prefWidth="890.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="434.5999755859375" minWidth="0.0" prefWidth="0.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="217.8000244140625" minHeight="0.0" prefHeight="37.800025939941406" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="314.0" minHeight="2.3999877929687514" prefHeight="11.199975585937501" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="345.6000122070312" minHeight="10.0" prefHeight="336.8000244140625" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.topAnchor="5.0" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" />
+                    </GridPane.margin>
+                    <children>
+                        <TableView fx:id="tablePupil" editable="true" prefHeight="336.0" prefWidth="535.0" AnchorPane.topAnchor="5.0">
+                            <columns>
+                                <TableColumn fx:id="idPupil" prefWidth="100" text="ID" visible="false" />
+                                <TableColumn fx:id="namePupil" prefWidth="159.20001220703125" text="Full Name" />
+                                <TableColumn fx:id="birthdayPupil" minWidth="0.0" prefWidth="150" text="Birthday" />
+                                <TableColumn fx:id="emailPupil" minWidth="1.60003662109375" prefWidth="224.0" text="Email" />
+
+                            </columns>
+                        </TableView>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btAdd" layoutX="12.0" layoutY="116.0" mnemonicParsing="false" onAction="#btAddOnClick" prefHeight="26.0" prefWidth="168.0" style="-fx-background-color:  #48d1cc;" text="ADD" textFill="BLACK">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                                <Button fx:id="btUpdate" layoutX="12.0" layoutY="154.0" mnemonicParsing="false" onAction="#btUpdateOnClick" prefHeight="26.0" prefWidth="168.0" style="-fx-background-color:  #48d1cc;" text="UPDATE" textFill="BLACK">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                                <Button fx:id="btDelete" layoutX="12.0" layoutY="192.0" mnemonicParsing="false" onAction="#btDeleteOnClick" prefHeight="26.0" prefWidth="168.0" style="-fx-background-color:  #48d1cc;" text="DELETE" textFill="BLACK">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                                <Button fx:id="btGoBack" layoutX="11.0" layoutY="229.0" mnemonicParsing="false" onAction="#btGoBackOnClick" prefHeight="26.0" prefWidth="168.0" style="-fx-background-color:  #dc143c;" text="Go Back" textFill="BLACK">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="btMail" layoutX="12.0" layoutY="78.0" mnemonicParsing="false" onAction="#btMailOnClick" prefHeight="30.0" prefWidth="168.0" style="-fx-background-color:  #48d1cc;" text="SEND TIME TABLE" textFill="BLACK">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <ImageView fitHeight="29.0" fitWidth="24.0" layoutX="17.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@send.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@add.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="14.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@update.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="11.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@delete.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="14.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@goBack%20.png" />
+                           </image>
+                        </ImageView>
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+            <TextField fx:id="search" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#tfRechecherOnKeyReleased" prefHeight="30.0" prefWidth="200.0" visible="false">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets top="50.0" />
+               </GridPane.margin>
+            </TextField>
+
+            </children>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+        </GridPane>
+    </children>
+</AnchorPane>
